@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://DichVu/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://DichVu/">
+
+<xs:element name="getLichSuTaiKhoan" type="tns:getLichSuTaiKhoan" />
+
+<xs:element name="getLichSuTaiKhoanResponse" type="tns:getLichSuTaiKhoanResponse" />
+
+<xs:element name="getTaiKhoan" type="tns:getTaiKhoan" />
+
+<xs:element name="getTaiKhoanResponse" type="tns:getTaiKhoanResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:element name="insertChuyenTien" type="tns:insertChuyenTien" />
+
+<xs:element name="insertChuyenTienResponse" type="tns:insertChuyenTienResponse" />
+
+<xs:element name="insertRutTien" type="tns:insertRutTien" />
+
+<xs:element name="insertRutTienResponse" type="tns:insertRutTienResponse" />
+
+<xs:element name="ktdn" type="tns:ktdn" />
+
+<xs:element name="ktdnResponse" type="tns:ktdnResponse" />
+
+<xs:element name="updateSodu" type="tns:updateSodu" />
+
+<xs:element name="updateSoduResponse" type="tns:updateSoduResponse" />
+
+<xs:complexType name="updateSodu">
+<xs:sequence>
+<xs:element name="SoTaiKhoan" type="xs:string" minOccurs="0" />
+<xs:element name="SoTien" type="xs:long" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSoduResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLichSuTaiKhoan">
+<xs:sequence>
+<xs:element name="SoTaiKhoan" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLichSuTaiKhoanResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:chiTietTaiKhoanbean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="chiTietTaiKhoanbean">
+<xs:sequence>
+<xs:element name="ghiChu" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:string" minOccurs="0" />
+<xs:element name="ngayRutTien" type="xs:dateTime" minOccurs="0" />
+<xs:element name="soTaiKhoan" type="xs:string" minOccurs="0" />
+<xs:element name="soTienRutRa" type="xs:long" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertRutTien">
+<xs:sequence>
+<xs:element name="SoTaiKhoan" type="xs:string" minOccurs="0" />
+<xs:element name="SoTienRut" type="xs:long" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertRutTienResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ktdn">
+<xs:sequence>
+<xs:element name="SoTaiKhoan" type="xs:string" minOccurs="0" />
+<xs:element name="MatKhau" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ktdnResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taiKhoanbean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="taiKhoanbean">
+<xs:sequence>
+<xs:element name="hoten" type="xs:string" minOccurs="0" />
+<xs:element name="matKhau" type="xs:string" minOccurs="0" />
+<xs:element name="soTaiKhoan" type="xs:string" minOccurs="0" />
+<xs:element name="soTien" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertChuyenTien">
+<xs:sequence>
+<xs:element name="SoTaiKhoan" type="xs:string" minOccurs="0" />
+<xs:element name="SoTienRut" type="xs:long" />
+<xs:element name="GhiChu" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertChuyenTienResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTaiKhoan">
+<xs:sequence>
+<xs:element name="SoTaiKhoan" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTaiKhoanResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:taiKhoanbean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
